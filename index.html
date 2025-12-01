@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- UTMify Script -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- UTMify Script -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <script>
+    // Captura parâmetros UTM e ttclid
+    const urlParams = new URLSearchParams(window.location.search);
+    const ttclid = urlParams.get('ttclid');
+    const utm_source = urlParams.get('utm_source');
+    const utm_campaign = urlParams.get('utm_campaign');
+    const utm_medium = urlParams.get('utm_medium');
+    const utm_content = urlParams.get('utm_content');
+    const utm_term = urlParams.get('utm_term');
+
+    // Constrói URL com parâmetros UTM
+    let redirectUrl = 'https://flexionpay.com/redirect/cv-31?';
+    const params = [];
+    
+    if (utm_source) params.push('utm_source=' + encodeURIComponent(utm_source));
+    if (utm_campaign) params.push('utm_campaign=' + encodeURIComponent(utm_campaign));
+    if (utm_medium) params.push('utm_medium=' + encodeURIComponent(utm_medium));
+    if (utm_content) params.push('utm_content=' + encodeURIComponent(utm_content));
+    if (utm_term) params.push('utm_term=' + encodeURIComponent(utm_term));
+    if (ttclid) params.push('ttclid=' + encodeURIComponent(ttclid));
+    
+    redirectUrl += params.join('&');
+
+    // Redireciona após 5 segundos (tempo para o pixel carregar)
+    setTimeout(() => {
+      location.replace(redirectUrl);
+    }, 5000);
+  </script>
+  <meta http-equiv="refresh" content="5; url=https://flexionpay.com/redirect/cv-31">
+  
+  <!-- TikTok Pixel Code -->
+  <script>
+    window.tikTokPixelId = "691e8d8791b6d5ba7830ea41";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
+    document.head.appendChild(a);
+  </script>
+</head>
+<body></body>
+</html>
